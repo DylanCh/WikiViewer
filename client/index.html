@@ -8,21 +8,21 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="https://rawgit.com/DylanCh/WikiViewer/master/client/site.css" rel="stylesheet" type="text/css">
   </head>
-  <body ng-app="wikiViewerApp" ng-controller="wikiController">
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-      <a class="navbar-brand" href="#">WikiViewer</a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active"></li>
-        </ul>
-    </nav>
-    <center class="container centered">
+  <body ng-app="wikiViewerApp" ng-controller="wikiController" style="margin: 0 auto; width :90%">    
+    <center class="container">
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <a class="navbar-brand" href="#">WikiViewer</a>
+      </nav>
       <div class="row">
         <div class="form-group">
           <label class="label">
             Search for Wiki articles:</label>
           <input type="text" class="form-control" ng-model="query" />
           <button ng-click="getWiki()" class="form-control btn btn-primary">Search</button>
+          <button id = "randomBtn" class="form-control btn" 
+            style="cursor:pointer" ng-click="randomize">
+            Random
+          </button>
         </div>
       </div>
       <div class="row">
