@@ -13,6 +13,7 @@ app.controller(
 
      $scope.randomize = ()=>{
        console.log('Generating random article');
+       location.href = 'https://en.wikipedia.org/wiki/Special:Random';
      };
      
      $scope.getWiki = ()=>{
